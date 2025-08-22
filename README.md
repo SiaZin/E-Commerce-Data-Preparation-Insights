@@ -4,7 +4,7 @@ Data preparation on real-world Brazilian ecommerce public dataset  made for cate
 ## Repository Structure
 - `data_preparation.ipynb` — main Python file
 - `data/raw/` — original CSVs (unmodified)
-- `data/processed/` — final table for Tableau
+- `data/processed/` — final CSV for Tableau
 - `MBA_Olist.twbx` — Tableau packaged workbook
 
 ## Data
@@ -12,17 +12,19 @@ Source: [Brazilian E-Commerce Public Dataset by Olist.](https://www.kaggle.com/d
 
 Orders made at [Olist store](https://www.olist.com/) (Brazil) in 2016 to 2018. Collection methodology: Random Sampling.
 
+## Overview 
+This project began as an attempt to perform Market Basket Analysis (MBA) on a large, real-world e-commerce dataset at the category level. The full data preparation workflow was completed — including cleaning, merging, and translating product categories — before a key insight emerged:
+>Less than 1% of orders contained products from more than one category.
 
-## Key Steps (Short)
-1. Inspect & validate raw tables (types, nulls, duplicates).
-2. Add `quantity`, aggregate `(order_id, product_id)` to one row.
-3. Drop products with missing categories; join category translations.
-4. Build final table: `order_id`, `product_id`, `product_category_name_english`.
-5. Explore multi-category orders; result: ~0.75% of orders have >1 category.
+MBA relies on detecting meaningful co-occurrences of items in transactions. In this dataset, the extreme rarity of multi-category orders meant that association metrics like support, confidence, and lift would be unstable and largely uninformative.
 
-## Findings (Short)
-- Orders are overwhelmingly single-category → sparse co-occurrences.
-- MBA metrics (lift/confidence) unstable for most pairs due to low support.
+## Outcome
+
+While the dataset was not suitable for category-level MBA, the work is still valuable for:
+
+- Data preparation process — joining multiple datasets, handling missing values, and translating categories from Portuguese to English.
+- Exploratory findings — orders are overwhelmingly single-category → sparse co-occurrences.  MBA metrics (lift/confidence) are unstable for most pairs due to low support.
+- Lessons learned — to check basic dataset characteristics relevant to the intended analysis before committing to main actions.
 
 ## Key Metrics 
 Market Basket Analysis relies on a few standard metrics to evaluate the strength of associations between items:
