@@ -15,6 +15,7 @@ Orders made at [Olist store](https://www.olist.com/) (Brazil) in 2016 to 2018. C
 ## Overview 
 This project began as an attempt to perform Market Basket Analysis (MBA) on a large, real-world e-commerce dataset at the category level. The full data preparation workflow was completed — including cleaning, merging, and translating product categories — before a key insight emerged:
 >Less than 1% of orders contained products from more than one category.
+<img src="screenshots/dataset_insights.png" width="500" height="300">
 
 MBA relies on detecting meaningful co-occurrences of items in transactions. In this dataset, the extreme rarity of multi-category orders meant that association metrics like support, confidence, and lift would be unstable and largely uninformative.
 
