@@ -28,7 +28,8 @@ While the dataset was not suitable for category-level MBA, the work is still val
 - Exploratory findings — orders are overwhelmingly single-category → sparse co-occurrences.  MBA metrics (lift/confidence) are unstable for most pairs due to low support.
 - Lessons learned — to check basic dataset characteristics relevant to the intended analysis before committing to main actions.
 - Tableau modeling practice - implementing MBA logic in Tableau required building a self-join on the orders table to generate antecedent–consequent pairs. This was a challenging but valuable learning step, since Tableau does not natively support MBA. The screenshots included show how the self-join was configured.
-  <img src="screenshots/Tableau_self_join.png" width="600" height="500">
+  <img src="screenshots/Tableau_self_join.png" width="650" height="550">
+  <img src="screenshots/Tableau_self_join_example.png" width="500" height="400">
 
 ## Key Metrics 
 Market Basket Analysis relies on a few standard metrics to evaluate the strength of associations between items:
