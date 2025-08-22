@@ -18,6 +18,7 @@ This project began as an attempt to perform Market Basket Analysis (MBA) on a la
 <img src="screenshots/dataset_insights.png" width="500" height="300">
 
 MBA relies on detecting meaningful co-occurrences of items in transactions. In this dataset, the extreme rarity of multi-category orders meant that association metrics like support, confidence, and lift would be unstable and largely uninformative.
+
 <img src="screenshots/Lift_and_Frequency_matrix.png" width="600" height="500">
 
 ## Outcome
